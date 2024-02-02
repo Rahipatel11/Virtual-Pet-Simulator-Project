@@ -7,6 +7,7 @@ class pet
     private static int happiness = 5;
     private static int health = 5;
 
+
     //Method to feed the pet
     public static void feed()
     {
@@ -34,7 +35,7 @@ class pet
     public static void Play()
     {
         // Increase happiness, increase hunger
-        if (happiness <=8)
+        if (happiness <= 8)
         {
             happiness += 2;
         }
@@ -81,35 +82,46 @@ class pet
         Console.WriteLine($"{name} - Hunger: {hunger}, Happiness:{happiness},Health:{health}");
     }
 
-   
-    
+
+
     // Main method to run the program
     public static void Main()
+
     {
         // Welcome message
-        Console.WriteLine("Welcome to the Virtual pet Simulator!");
+        Console.WriteLine("Welcome to the Virtual Pet Simulator!");
 
-        // User input for pet type and name
-        Console.Write("Choose a pet type(Dog,Rabbit,Cat,Horse):");
-        string petType = Console.ReadLine();
+        List<string> petTypes = new List<string> { "Dog", "Rabbit", "Cat", "Horse" };
 
-        Console.Write("Give your pet a name:");
+        Console.WriteLine("Choose a pet type:");
+        for (int i = 0; i < petTypes.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {petTypes[i]}");
+        }
+
+        Console.Write("Select a pet type (1-4): ");
+        int petTypeIndex = int.Parse(Console.ReadLine()) - 1;
+
+        if (petTypeIndex < 0 || petTypeIndex >= petTypes.Count)
+        {
+            Console.WriteLine("Invalid choice. Exiting program.");
+            return;
+        }
+
+        string petType = petTypes[petTypeIndex];
+
+        Console.Write($"Give your {petType} a name: ");
         name = Console.ReadLine();
-
-
         while (true)
         {
-            Console.WriteLine("\n Main menu :");
-
-
-
+            Console.WriteLine("\n🎮 Main menu 🎮:");
 
 
             // Main game loop
             while (true)
             {
                 // Display main menu options
-                Console.WriteLine("\n Main menu :");
+
                 Console.WriteLine("1.Feed him");
                 Console.WriteLine("2.Play with the pet");
                 Console.WriteLine("3.Let the pet take a nap");
@@ -125,33 +137,29 @@ class pet
                 {
                     feed();
                 }
-
                 else if (choice == "2")
                 {
                     Play();
                 }
-
                 else if (choice == "3")
                 {
                     Rest();
                 }
-
                 else if (choice == "4")
                 {
                     Displaystats();
                 }
-
                 else if (choice == "5")
                 {
                     // Exit the program with a farewell message
                     Console.WriteLine($"{name} is waving Goodbye with a smile! Thanks for playing with {name}! Adios!!!!");
-                    break;
+                    break; //Exit the innner loop when the user chooses to exit
                 }
 
                 else
                 {
                     // Display error message for invalid input
-                    Console.WriteLine("Invaild choice, Please Choose Between the no 1to5");
+                    Console.WriteLine("Invaild choice, Please Choose Between the no 1 to 5.");
                 }
 
                 // Simulate the passage of time (1 hour per action)
@@ -160,5 +168,7 @@ class pet
 
             }
         }
+
     }
 }
+
