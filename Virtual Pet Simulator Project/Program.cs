@@ -90,11 +90,7 @@ class pet
         Console.WriteLine("Welcome to the Virtual pet Simulator!");
 
         // User input for pet type and name
-        Console.Write("Choose a pet type:");
-        Console.WriteLine("1.Dog");
-        Console.WriteLine("2.Rabbit");
-        Console.WriteLine("3.Cat");
-        Console.WriteLine("4.Horse");
+        Console.Write("Choose a pet type(Dog,Rabbit,Cat,Horse):");
         string petType = Console.ReadLine();
 
         Console.Write("Give your pet a name:");
