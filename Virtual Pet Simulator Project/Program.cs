@@ -96,6 +96,9 @@ class pet
         Console.Write("Give your pet a name:");
         name = Console.ReadLine();
 
+        while(true)
+        {
+            Console.WriteLine("\n🎮 Main menu 🎮:")
 
         while (true)
         {
@@ -125,41 +128,12 @@ class pet
                     feed();
                 }
 
-                else if (choice == "2")
-                {
-                    Play();
-                }
-
-                else if (choice == "3")
-                {
-                    Rest();
-                }
-
-                else if (choice == "4")
-                {
-                    Displaystats();
-                }
-
-                else if (choice == "5")
-                {
-                    // Exit the program with a farewell message
-                    Console.WriteLine($"{name} is waving Goodbye with a smile! Thanks for playing with {name}! Adios!!!!");
-                    break;
-                }
-
-                else
-                {
-                    // Display error message for invalid input
-                    Console.WriteLine("Invaild choice, Please Choose Between the no 1to5");
-                }
-
-                // Simulate the passage of time (1 hour per action)
-                hunger++;
-                happiness--;
-
-            }
         }
     }
+      
+
 }
-
-
+=======
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+>>>>>>> d83695b6fb1e723d390024f8425e306660a51818
