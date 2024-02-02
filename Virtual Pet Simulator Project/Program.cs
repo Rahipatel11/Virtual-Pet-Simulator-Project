@@ -26,7 +26,7 @@ class pet
         }
 
         // Display message
-        Console.WriteLine($"yum!{name}devoured the food. Hunger decreased, health increased.");
+        Console.WriteLine($"yum! {name} devoured the food. Hunger decreased, health increased.");
 
     }
 
@@ -70,7 +70,7 @@ class pet
         }
 
         // Display message
-        Console.WriteLine($"{name}is taking a nap. Health increased, happiness decreased slightly.");
+        Console.WriteLine($"{name} is taking a nap. Health increased, happiness decreased slightly.");
     }
 
 
@@ -78,7 +78,7 @@ class pet
     public static void Displaystats()
     {
         // Display pet's name and current stats
-        Console.WriteLine($"{name}- Hunger: {hunger}, Happiness:{happiness},Health:{health}");
+        Console.WriteLine($"{name} - Hunger: {hunger}, Happiness:{happiness},Health:{health}");
     }
 
    
@@ -90,7 +90,11 @@ class pet
         Console.WriteLine("Welcome to the Virtual pet Simulator!");
 
         // User input for pet type and name
-        Console.Write("Choose a pet type(Dog,Rabbit,Cat,Horse):");
+        Console.Write("Choose a pet type:");
+        Console.WriteLine("1.Dog");
+        Console.WriteLine("2.Rabbit");
+        Console.WriteLine("3.Cat");
+        Console.WriteLine("4.Horse");
         string petType = Console.ReadLine();
 
         Console.Write("Give your pet a name:");
@@ -99,7 +103,8 @@ class pet
 
         while (true)
         {
-            Console.WriteLine("\n🎮 Main menu 🎮:");
+            Console.WriteLine("\n Main menu :");
+
 
 
 
@@ -108,7 +113,7 @@ class pet
             while (true)
             {
                 // Display main menu options
-                Console.WriteLine("\n🎮 Main menu 🎮:");
+                Console.WriteLine("\n Main menu :");
                 Console.WriteLine("1.Feed him");
                 Console.WriteLine("2.Play with the pet");
                 Console.WriteLine("3.Let the pet take a nap");
@@ -161,5 +166,3 @@ class pet
         }
     }
 }
-
-
