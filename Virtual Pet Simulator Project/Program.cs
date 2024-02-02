@@ -97,7 +97,8 @@
 
         while(true)
         {
-            Console.WriteLine("\n🎮 Main menu 🎮:");
+            Console.WriteLine("\n🎮 Main menu 🎮:")
+
 
 
         }
@@ -105,7 +106,4 @@
       
 
 }
-=======
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
->>>>>>> d83695b6fb1e723d390024f8425e306660a51818
+
