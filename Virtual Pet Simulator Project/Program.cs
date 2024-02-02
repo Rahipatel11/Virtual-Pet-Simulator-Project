@@ -96,11 +96,13 @@ class pet
         Console.Write("Give your pet a name:");
         name = Console.ReadLine();
 
+        while(true)
+        {
+            Console.WriteLine("\n🎮 Main menu 🎮:")
 
         while (true)
         {
-            Console.WriteLine("\n Main menu :");
-
+            Console.WriteLine("\n🎮 Main menu 🎮:")
 
 
 
@@ -126,20 +128,7 @@ class pet
                     feed();
                 }
 
-                else if (choice == "2")
-                {
-                    Play();
-                }
-
-                else if (choice == "3")
-                {
-                    Rest();
-                }
-
-                else if (choice == "4")
-                {
-                    Displaystats();
-                }
+      
 
                 else if (choice == "5")
                 {
@@ -162,3 +151,8 @@ class pet
         }
     }
 }
+
+<<<<<<<<< Temporary merge branch 1
+=========
+
+>>>>>>>>> Temporary merge branch 2
