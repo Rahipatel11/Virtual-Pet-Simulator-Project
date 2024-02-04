@@ -104,9 +104,7 @@ class pet
 
         if (petTypeIndex < 0 || petTypeIndex >= petTypes.Count)
         {
-            Console.WriteLine("Invalid choice. Exiting program.");
-            return;
-        }
+            Console.WriteLine("\n Main menu :");
 
         string petType = petTypes[petTypeIndex];
 
@@ -114,7 +112,7 @@ class pet
         name = Console.ReadLine();
         while (true)
         {
-            Console.WriteLine("\n🎮 Main menu 🎮:");
+            Console.WriteLine("\n🎮 Main menu 🎮:")
 
 
             // Main game loop
@@ -162,13 +160,10 @@ class pet
                     Console.WriteLine("Invaild choice, Please Choose Between the no 1 to 5.");
                 }
 
-                // Simulate the passage of time (1 hour per action)
-                hunger++;
-                happiness--;
-
-            }
         }
-
     }
+      
+
 }
+<<<<<<<<< Temporary merge branch 1
 
