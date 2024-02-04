@@ -1,6 +1,7 @@
 using System;
-class pet
-{
+class Pet
+  {
+
     // Static variables to store pet's attributes
     private static string name = "";
     private static int hunger = 5;
@@ -165,5 +166,5 @@ class pet
         }
 
     }
-}
+ }
 
